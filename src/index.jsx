@@ -5,6 +5,9 @@ import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+if (!localStorage.getItem('localMovies')) {
+  localStorage.setItem('localMovies', JSON.stringify([]));
+}
 root.render(
   <React.StrictMode>
     <App />
